@@ -1,0 +1,114 @@
+body {
+  background: #e5e5e5;
+}
+
+.auth {
+  background-color: #ffffff;
+  margin: 1em auto;
+  max-width: 441px;
+  padding: 1em;
+  min-height: 294px;
+  justify-content: space-between;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth button {
+  align-self: center;
+  width: 100%;
+  border-radius: var(--global-radius);
+  margin-block: 0.5em;
+}
+
+.register_anchor,
+.login_anchor {
+  color: black;
+  text-decoration: none;
+}
+
+.register_anchor:hover,
+.login_anchor:hover {
+  color: var(--global-primary-color);
+}
+
+.register_submit:focus,
+.auth button:focus {
+  background-color: white;
+  color: var(--global-primary-color);
+  border-color: var(--global-primary-color); 
+  box-shadow: 0 0 0 0.25rem #fd313180;
+}
+
+.register_submit:active:focus,
+.auth button:active:focus {
+  border-color: #fd313180;
+  background-color: #fd313180;
+  box-shadow: 0 0 0 0.25rem #fd313180;
+}
+
+input,
+select {
+  width: 401px;
+  height: 35px;
+  background: #ffffff;
+  border: var(--global-border);
+  border-radius: var(--global-radius);
+}
+
+select {
+  color: #3e4542;
+}
+
+.form-check-input:checked {
+  background-color: var(--global-primary-color);
+  border-color: var(--global-primary-color);
+}
+
+.form-check-input:focus {
+  border-color: var(--global-primary-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(254, 43, 43, 0.398);
+}
+
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%233e4542'/%3e%3c/svg%3e");
+}
+
+.text-danger {
+  color: var(--global-primary-color);
+}
+
+/* font-size utils */
+
+.fs-24 {
+  font-weight: 600;
+  font-size: 24.0032px;
+}
+
+.fs-15 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.fs-14 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.fs-12 {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+/*  */
+
+@media screen and (min-width: 600px) {
+  .auth {
+    border: var(--global-border);
+    border-radius: var(--global-radius);
+  }
+}

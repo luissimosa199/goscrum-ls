@@ -1,0 +1,289 @@
+body {
+  background: white;
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--global-radius);
+  min-height: 237px;
+  height: fit-content;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0.5em;
+}
+
+p {
+  margin: 0;
+}
+
+.card_close {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+/* cards */
+
+ul.list {
+  padding-block: 0.5em;
+  margin: 0.2em;
+}
+
+/* task-form */
+
+.task-form {
+  width: 100%;
+}
+
+.task-form form {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.wraper-list {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.wraper-list-inner {
+  background: #fafafa;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--global-radius);
+  padding: 0.5em;
+}
+
+/* filter-form */
+
+.filter_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filter_form > * {
+  width: 100%;
+}
+
+.filter_form input[type="text"],
+.filter_form select {
+  font-size: 12px;
+  background: #ffffff;
+  border: var(--global-border);
+  border-radius: var(--global-radius);
+
+  width: 100%;
+  height: 37px;
+  padding-left: 1em;
+}
+
+.filter_form input[type="radio"] {
+  accent-color: var(--global-primary-color);
+  width: 15px;
+  height: 15px;
+}
+
+.radio_label {
+  line-height: 15px;
+}
+
+/* task-form */
+
+.task-form ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5em;
+  justify-content: space-between;
+}
+
+.task-form ul li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input_error {
+  border-color: red;
+}
+
+.task-form-li input,
+.task-form-li select,
+.description-textarea textarea {
+  font-size: 12px;
+  background: #ffffff;
+  border: var(--global-border);
+  border-radius: var(--global-radius);
+  width: 100%;
+  height: 37px;
+  padding-left: 0.5em;
+}
+
+.description-textarea textarea {
+  padding-top: 0.5em;
+  height: 106px;
+}
+
+/* buttons */
+
+.btn {
+  border: none;
+  background: var(--global-primary-color);
+  border-radius: var(--global-radius);
+  transition: all ease-in-out 150ms;
+}
+
+.btn:hover {
+  background-color: white;
+  outline: 1px solid var(--global-primary-color);
+  color: var(--global-primary-color);
+}
+
+.description-textarea ~ .btn {
+  padding: 0.5em 1.5em;
+  color: white;
+}
+
+.description-textarea ~ .btn:hover {
+  color: var(--global-primary-color);
+}
+
+.info_btns .btn {
+  margin-inline: 2px;
+}
+
+.info_btns .btn,
+.btn_showmore {
+  min-width: 23px;
+  height: 14px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  border-radius: 3px;
+  padding: 2px 3px;
+}
+
+.btn-info {
+  background: #007bff;
+  color: #ffffff;
+}
+
+.btn-warning {
+  background: #fbde3f;
+}
+
+.btn-success {
+  background: #1ec876;
+}
+
+.create_task_btn:focus {
+  background-color: white;
+  color: var(--global-primary-color);
+  border-color: var(--global-primary-color);
+  box-shadow: 0 0 0 0.25rem #fd313180;
+}
+
+.create_task_btn:active:focus {
+  border-color: #fd313180;
+  background-color: #fd313180;
+  box-shadow: 0 0 0 0.25rem #fd313180;
+}
+
+/* font-size utils */
+
+.fs-24 {
+  font-weight: 600;
+  font-size: 24.0032px;
+}
+
+.fs-18 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.fs-15 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.fs-12 {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+label.fs-12 {
+  font-weight: 400;
+}
+
+.fs-8 {
+  font-weight: 400;
+  font-size: 8px;
+}
+
+/*  */
+
+.list_empty {
+  --line-height: 200px;
+  border-radius: var(--global-radius);
+  border: var(--global-border);
+  background-color: white;
+  font-size: 24px;
+  width: 100%;
+  height: var(--line-height);
+  line-height: var(--line-height);
+  text-align: center;
+
+}
+
+/* media-query */
+
+@media (min-width: 900px) {
+  .list_container {
+    display: flex;
+  }
+
+  #tasks {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .task-form {
+    min-width: 30%;
+  }
+
+  .filter_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* task-form */
+
+  .task-form {
+    width: 49vw;
+  }
+
+  .task-form form {
+    width: 49vw;
+    padding: 0.5em;
+  }
+
+  .wraper-list {
+    width: 49vw;
+    padding: 0.5em;
+  }
+}

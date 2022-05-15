@@ -1,0 +1,106 @@
+header {
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+}
+
+.logo_img {
+  width: 82px;
+  height: 17px;
+  margin-right: 0.5em;
+}
+
+header > div {
+  cursor: pointer;
+}
+
+.logout {
+  width: fit-content;
+  gap: 0.5em;
+}
+
+.logout_button {
+  border: none;
+  background-color: white;
+  text-align: center;
+  color: var(--global-primary-color);
+}
+
+.btn_donar {
+  width: 70px;
+  height: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fs-15 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.btn_donar:focus {
+  background-color: white;
+  color: var(--global-primary-color);
+  border-color: var(--global-primary-color);
+  box-shadow: 0 0 0 0.25rem #fd313180;
+}
+
+.btn_donar:active:focus {
+  border-color: #fd313180;
+  background-color: #fd313180;
+  box-shadow: 0 0 0 0.25rem #fd313180;
+}
+
+.toggle_menu,
+.toggle_menu_label {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+@media screen and (max-width: 510px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logout {
+    flex-direction: column;
+    height: fit-content;
+    z-index: 10;
+    align-items: center;
+    background-color: white;
+    gap: 1em;
+    padding: 1em;
+    position: absolute;
+    transition: all ease-in-out 150ms;
+    border: var(--global-border);
+    border-radius: var(--global-radius);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    top: 60px;
+    right: -1vw;
+  }
+
+  .toggle_menu_label {
+    font-size: 2rem;
+    visibility: visible;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    cursor: pointer;
+    top: -1px;
+    transition: all ease-in-out 200ms;
+  }
+
+  input[type="checkbox"]:checked ~ div {
+    top: 60px;
+    right: 10px;
+    opacity: 1;
+  }
+
+  input[type="checkbox"]:checked ~ label {
+    filter: drop-shadow(0 0 0.75rem var(--global-primary-color));
+  }
+}
