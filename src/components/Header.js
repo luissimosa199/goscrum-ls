@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <header>
             <div>
-                <img className="logo_img" src="/logo192.png" alt="react logo" />
+                <img className="logo_img" src="/goscrum-ls/logo192.png" alt="react logo" />
             </div>
             <input type="checkbox" name="toggle_menu" id="toggle_menu" className="toggle_menu"/>
             <label className="toggle_menu_label" htmlFor="toggle_menu" ><img src="https://img.icons8.com/material-outlined/48/000000/menu--v1.png" /></label>
