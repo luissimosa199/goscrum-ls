@@ -1,6 +1,7 @@
 {
   "name": "goscrum-ls",
   "version": "0.1.0",
+  "homepage": "https://luissimosa199.github.io/goscrum-ls",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -8,7 +9,6 @@
     "axios": "^0.27.2",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.2",
-    "gh-pages": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-loading-skeleton": "^3.1.0",
